@@ -23,7 +23,7 @@ public class DataSourcess{
 	public DataSource getDataSource(){
 		BeanDefinitionRegistry reg = new DefaultListableBeanFactory();
 		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(reg);
-		reader.loadBeanDefinitions(new ClassPathResource("spring1.xml"));
+		reader.loadBeanDefinitions(new ClassPathResource("spring.xml"));
 		BeanFactory bf = (BeanFactory) reg;		
 		DataSource dataBean = (DataSource) bf.getBean("myDataSource");
 		return dataBean;
