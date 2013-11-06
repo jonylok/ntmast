@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <!--<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+        destroy-method="close"
+        p:driverClassName="com.mysql.jdbc.Driver"
+        p:url="jdbc:mysql://localhost:3306/nrs"
+        p:username="ara"
+        p:password="ara123"/>-->
+        
+		<!--sql server2008  -->
+		<!-- --> 
+		<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+        destroy-method="close"
+        p:driverClassName="net.sourceforge.jtds.jdbc.Driver"
+        p:url="jdbc:jtds:sqlserver://127.0.0.1:1433/nrs09"
+        p:username="sa"
+        p:password="nrs123"/>
+
+	<bean id="dataBean" class="com.eddy.datasources.DataSources">
+		<property name="dataSource" ref="myDataSource" />
+	</bean>
+</beans>
