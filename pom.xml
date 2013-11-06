@@ -18,4 +18,8 @@
   <build>
     <finalName>ntmast</finalName>
   </build>
+  <modules>
+  	<module>ntmast-commons-excel</module>
+  	<module>ntmast-commons-datasources</module>
+  </modules>
 </project>
